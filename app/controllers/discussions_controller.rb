@@ -71,7 +71,7 @@ class DiscussionsController < ApplicationController
     end
 
     def find_channels
-      @channels = Channel.all('created_at  desc')
+      @channels = Channel.all.order('created_at  desc')
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
